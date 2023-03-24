@@ -15,4 +15,8 @@ class Project extends Model
         'content',
         'img'
     ];
+
+    // public function type(){
+    //     return 
+    // }
 }
