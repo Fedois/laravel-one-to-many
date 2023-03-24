@@ -13,4 +13,8 @@ class type extends Model
         'name',
         'slug'
     ];
+
+    public function Posts(){
+        return $this->belongsTo(Post::class);
+    }
 }
