@@ -18,7 +18,7 @@
             @if ($project->type)
                 <p>progetto di tipo: <strong>{{ $project->type->name }}</strong></p>
             @else
-                <p>nessun tipo specificato</p>
+                <p>progetto di tipo: nessun tipo specificato</p>
             @endif
         </div>
 
@@ -38,15 +38,15 @@
                 <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">conferma eliminazione</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">conferma eliminazione</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                    sei sicuro di voler eliminare??
+                        sei sicuro di voler eliminare??
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">no</button>
-                    <button type="submit" class="btn btn-primary">Salva</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">no</button>
+                        <button type="submit" class="btn btn-primary">Salva</button>
                     </div>
                 </div>
                 </div>
