@@ -14,6 +14,12 @@
             @endif
             
             <p>{{ $project->content }}</p>
+
+            @if ($project->type)
+                <p>progetto di tipo: <strong>{{ $project->type->name }}</strong></p>
+            @else
+                <p>nessun tipo specificato</p>
+            @endif
         </div>
 
         <a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-warning my-1">Modifica</a>

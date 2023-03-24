@@ -20,6 +20,19 @@
                 </div>
 
                 <div class="my-3">
+                    <label for="type_id" class="form-label">Tipo</label>
+                    <select name="type_id" id="type_id">
+                        <option value="">nessun tipo</option>
+
+                        @foreach ($types as $type)
+                            <option value="{{ $type->id }}" {{ old('type_id') == $type->id ? 'selected' : '' }}>
+                                {{ $type->name }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <div class="my-3">
                     <label for="img" class="form-label">Immagine</label>
                     <input type="file" class="form-control" id="img" name="img" placeholder="aggiungi immagine..." accept="image/*">
                 </div>
