@@ -20,6 +20,19 @@
                     <textarea class="form-control" id="content" name="content" rows="3">{{ $project->content }}</textarea>
                 </div>
 
+                              <div class="my-3">
+                    <label for="type_id" class="form-label">Tipo</label>
+                    <select name="type_id" id="type_id">
+                        <option value="">nessun tipo</option>
+
+                        @foreach ($types as $type)
+                            <option value="{{ $type->id }}" {{ old('type_id', $project->type_id) == $type->id ? 'selected' : '' }}>
+                                {{ $type->name }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+
                 @if ($project->img)
                     <div>
                         <img class="h-50 w-50" src="{{ asset('storage/'. $project->img) }}" alt="">
