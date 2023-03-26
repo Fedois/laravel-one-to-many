@@ -6,6 +6,16 @@
         <h1>{{ $type->name }}</h1> 
         <span>slug: {{ $type->slug }}</span>
 
-        <h3>progetti totali: {{ $type->projects()->count() }}</h3>
+        <h3 class="mt-4">progetti totali: {{ $type->projects()->count() }}</h3>
+
+        <ul>
+            @if($type->projects)
+                @foreach ($type->projects as $project)
+                    <li>
+                        <a href="{{ route('admin.projects.show', $project->id) }}">{{ $project->title }}</a>
+                    </li>
+                @endforeach
+            @endif
+        </ul>
     </div>
 @endsection

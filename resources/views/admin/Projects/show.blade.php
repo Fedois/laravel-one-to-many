@@ -16,7 +16,11 @@
             <p>{{ $project->content }}</p>
 
             @if ($project->type)
-                <p>progetto di tipo: <strong>{{ $project->type->name }}</strong></p>
+                <p>progetto di tipo: 
+                    <strong>
+                        <a href="{{ route('admin.types.show', $project->type->id) }}">{{ $project->type->name }}</a>
+                    </strong>
+                </p>
             @else
                 <p>progetto di tipo: nessun tipo specificato</p>
             @endif
