@@ -14,7 +14,7 @@ class type extends Model
         'slug'
     ];
 
-    public function Posts(){
-        return $this->belongsTo(Post::class);
+    public function Projects(){
+        return $this->hasMany(Project::class);
     }
 }

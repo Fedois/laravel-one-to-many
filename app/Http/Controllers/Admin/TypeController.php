@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\type;
 use App\Http\Requests\StoretypeRequest;
 use App\Http\Requests\UpdatetypeRequest;
+
+// models
+use App\Models\type;
+use App\Models\project;
 
 // help
 use Illuminate\Support\Str;
