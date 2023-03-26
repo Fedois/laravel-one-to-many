@@ -10,7 +10,7 @@
                @include('partials.errors')
 
                 <div class="my-3">
-                    <label for="name" class="form-label">Titolo*</label>
+                    <label for="name" class="form-label">Nome*</label>
                     <input required type="text" class="form-control" id="name" name="name" placeholder="aggiungi nome..." value="{{ old('name') }}">
                 </div>
     
