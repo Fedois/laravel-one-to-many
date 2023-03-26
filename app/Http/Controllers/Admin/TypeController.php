@@ -8,7 +8,7 @@ use App\Http\Requests\UpdatetypeRequest;
 
 // models
 use App\Models\type;
-use App\Models\project;
+// use App\Models\project;
 
 // help
 use Illuminate\Support\Str;
@@ -34,9 +34,9 @@ class TypeController extends Controller
      */
     public function create()
     {
-        $types = Type::all();
+        // $types = Type::all();
 
-        return view('admin.types.index', compact('types'));
+        return view('admin.types.create');
     }
 
     /**
@@ -47,7 +47,14 @@ class TypeController extends Controller
      */
     public function store(StoretypeRequest $request)
     {
-        //
+        $data = $request->validated();
+
+        $data['slug'] = Str::slug($data['name']);
+
+        $newType = Type::create($data);
+
+        return redirect()->route('admin.types.show', $newType->id)->with('success', 'nuovo tipo aggiunto');
+
     }
 
     /**

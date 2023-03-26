@@ -2,11 +2,12 @@
 
 @section('content')
 <div class="container all-projects">
+    
     <h1 class="my-3">Tutti i tipi di progetto</h1>
 
-    @include('partials.success')
+    <a href="{{ route('admin.types.create') }}" class="btn btn-primary my-2">Nuovo Tipo</a>
 
-    {{-- <a href="{{ route('admin.projects.create') }}" class="btn btn-primary mb-2">Nuovo Type</a> --}}
+    @include('partials.success')
 
     <ul class="list-group">
         @foreach ($types as $type)
